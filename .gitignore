@@ -1,0 +1,17 @@
+# database
+server/db.sqlite3
+
+# Byte-compiled / optimized / DLL files
+server/__pycache__/
+server/*.py[cod]
+server/*$py.class
+
+# Distribution / packaging
+server/.Python
+server/env/
+server/dist/
+server/*.egg-info/
+server/.installed.cfg
+server/*.egg
+
+web-app/node_modules
