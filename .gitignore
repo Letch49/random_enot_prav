@@ -14,4 +14,4 @@ server/*.egg-info/
 server/.installed.cfg
 server/*.egg
 
-web-app/node_modules
+web-app/node_modules/
