@@ -1,0 +1,1 @@
+export const PRIMARY_BACKGROUND_COLOR = 'rgba(0, 103, 177, 1)';
