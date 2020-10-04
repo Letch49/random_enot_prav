@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row'
 import Header from "../elements/Header/Header";
@@ -11,6 +11,8 @@ const defaultProps = {
     isShowHeader: true
 }
 
+
+// Базовая обёртка
 const BasePageComponent: React.FC<Props> = props => {
     return (
         <>

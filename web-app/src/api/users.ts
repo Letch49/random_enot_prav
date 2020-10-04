@@ -1,9 +1,12 @@
 import request from "./request";
 
+// сохранение токена
 const saveToken = (token) => localStorage.setItem('token', token)
 
+// удаление токена
 const removeToken = () => localStorage.removeItem('token')
 
+// авторизация
 export const getToken = async (email: string, password: string): Promise<{ success: boolean, error: null }> => {
     const data = {email, password};
 
@@ -17,7 +20,7 @@ export const getToken = async (email: string, password: string): Promise<{ succe
         return {success: false, error: error}
     }
 }
-
+// регистрация
 export const register = async (email: string, password: string): Promise<{ success: boolean, error: null }> => {
     const data = {email, password}
 

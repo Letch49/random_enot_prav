@@ -16,7 +16,7 @@ const PrivateRoute = ({component: Component, isShowHeader = true, ...rest},) => 
         render={props => <BasePageComponent isShowHeader={isShowHeader}><Component {...props}/></BasePageComponent>}
     />
 )
-
+// роуты на сервере
 const routes = (
     <Switch>
         <PrivateRoute path={'/'} component={Index} exact={true}/>

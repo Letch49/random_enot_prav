@@ -1,11 +1,12 @@
 import React, {useReducer, useState} from 'react';
 import {createUseStyles} from "react-jss";
-import {Form, Button, Row, Col} from "react-bootstrap";
+import {Row, Col} from "react-bootstrap";
 import AuthForm from "../components/Auth/components/AuthForm";
 import {getToken, register} from "../api/users";
 import {useAlert} from 'react-alert'
 import {useHistory} from 'react-router-dom'
 
+// стили страницы
 const useStyles = createUseStyles({
     root: {
         width: '100%',
@@ -19,6 +20,7 @@ const useStyles = createUseStyles({
     }
 })
 
+// тип дейсвтия
 const initAuthType = 'login'
 
 const reducer = (state, action) => {
@@ -80,11 +82,11 @@ const Auth: React.FC = props => {
                 <Col lg={12} className={'mb-4'}>
                     <Row>
                         <Col lg={6}>
-                            <div className={s.toggle_authType} onClick={e => dispatch({type: 'login'})}>Войти</div>
+                            <div className={`${s.toggle_authType} ${state === 'login' ? '' : 'text-muted'}`} onClick={e => dispatch({type: 'login'})}>Войти</div>
                         </Col>
 
                         <Col lg={6} className={'text-right'}>
-                            <div className={s.toggle_authType} onClick={e => dispatch({type: 'register'})}>Регистрация</div>
+                            <div className={`${s.toggle_authType} ${state === 'register' ? '' : 'text-muted'}`} onClick={e => dispatch({type: 'register'})}>Регистрация</div>
                         </Col>
                     </Row>
                 </Col>

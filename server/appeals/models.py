@@ -25,3 +25,4 @@ class Appeal(models.Model):
     reason = models.TextField()
     text = models.TextField()
     file = models.FileField(null=True, blank=True)
+    description = models.TextField()
